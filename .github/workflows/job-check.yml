@@ -2,7 +2,7 @@ name: Job Alert
 
 on:
   schedule:
-    - cron: '30 3 * * 1-5'  # 09:00 AM IST = 03:30 UTC
+    - cron: '30 3 * * 1-5'  # 09:00 AM IST
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: '3.10'
 
       - name: Install dependencies
         run: pip install beautifulsoup4 requests
